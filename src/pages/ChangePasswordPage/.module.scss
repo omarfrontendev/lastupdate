@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.change__password__page {
+  padding-top: 3rem;
+  .form__wrapper {
+    .form__title {
+      font-size: $ft__18;
+      color: #07143b;
+      margin-bottom: 36px;
+    }
+  }
+  .inputs__container {
+    row-gap: 16px;
+  }
+}

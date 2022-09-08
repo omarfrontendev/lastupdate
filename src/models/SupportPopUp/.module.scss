@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.support__container {
+  padding: 20px;
+  row-gap: 20px;
+
+  .title__icon {
+    font-size: 20px;
+    color: #ccc;
+  }
+  .submit__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: $pure__white;
+    font-size: $ft__14;
+    background-color: $main__orange;
+    height: 50px;
+    border-radius: 29px;
+    width: 300px;
+    margin: 10px auto 0;
+  }
+}

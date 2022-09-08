@@ -1,0 +1,165 @@
+@import "../../styles/variables.scss";
+
+.messageDropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  
+  .header__dropdown {
+    padding: 41px 34px;
+    background-color: #F9F9F9;
+    margin-bottom: 38px;
+  }
+
+  .message__header {
+    column-gap: 24px;
+    justify-content: center;
+
+    .service__btn,
+    .delivery__btn {
+      border: none;
+      outline: none;
+      border-radius: 17px;
+      font-size: $ft__14;
+      font-weight: $ft__w__regular;
+      background-color: $main__orange;
+      color: $pure__white;
+      box-shadow: 0px 3px 12px #FC601152;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 144px;
+      height: 33px;
+    }
+    .delivery__btn {
+      border: 1px solid #E1E1E1;
+      background-color: $pure__white;
+      color: $dark__text__color;
+      box-shadow: none;
+      min-width: 122px;
+    }
+  }
+
+  .chat__content {
+
+    flex: 1;
+
+    // max-height: 45vh;
+    max-height: calc(100vh - 460px);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(216, 216, 216);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    .customer,
+    .cutomer__service {
+      padding: 0 34px;
+      margin-bottom: 22px;
+    }
+
+    .customer__name,
+    .customer_services__title {
+      color: $main__orange;
+      font-size: $ft__16;
+      font-weight: $ft__w__medium;
+      margin-bottom: 7px;
+    }
+    .customer__name {
+      text-align: right;
+      color: $dark__text__color;
+      & + .date {
+        text-align: right;
+      }
+    }
+    .date {
+      color: #BBBBBB;
+      font-weight: $ft__w__regular;
+      display: block;
+      margin-bottom: 19px;
+      font-size: 10px;
+    }
+    .cutomer__text {
+      padding: 19px 20px;
+      background-color: #F3F3F3;
+      font-size: 13px;
+      font-weight: $ft__w__regular;
+      color: $dark__text__color;
+      border-radius: 12px;
+      line-height: 21px;
+    }
+  }
+  .add__message {
+    margin: 0 34px 18px;
+    height: 50px;
+    border: 1px solid #E1E1E1;
+    border-radius: 50px;
+    padding: 7px 9px 7px 18px;
+
+    .message__input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+      &::placeholder {
+        color: $dark__text__color;
+        font-size: $ft__14;
+        font-weight: $ft__w__regular;
+      }
+    }
+    .message__btn {
+      border: none;
+      outline: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $main__orange;
+      color: $pure__white;
+    }
+  }
+
+}
+
+
+// ======== Start Media max-width: 1399px (1200px - 1399px) ==========//
+@media(max-width: 1399px) {
+  .messageDropdown {
+    .header__dropdown {
+      padding: 24px 30px;
+      margin-bottom: 24px;
+    }
+    .message__header {
+      column-gap: 18px;
+    }
+    .chat__content {
+      max-height: calc(100vh - 320px);
+      .customer,
+      .cutomer__service {
+        padding: 0 30px;
+        margin-bottom: 18px;
+      }
+    }
+    .add__message {
+      margin: 10px 33px 18px;
+    }
+  }
+}
+// ======== End Media max-width: 1399px (1200px - 1399px) ==========//
+
+// ======== End Media max-width: 991px (768px - 991px) ==========//
+@media(max-width: 991px) {
+  .messageDropdown {
+    .chat__content {
+      max-height: 100%;
+    }
+  }
+}
+// ======== End Media max-width: 991px (768px - 991px) ==========//

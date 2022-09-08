@@ -1,0 +1,33 @@
+@import "../styles/variables.scss";
+
+.main__layout {
+  background-color: $bg__white;
+  .app__main__container {
+    margin-left: 70px;
+    .app__container {
+      z-index: 1;
+      padding-top: 116px;
+      margin: auto;
+      max-width: 1920px;
+      min-height: calc(100vh - (70px));
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1400px) {
+  .main__layout {
+    .app__main__container {
+      .app__container {
+        padding-top: 100px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__layout {
+    .app__main__container {
+      margin-left: 0px;
+    }
+  }
+}

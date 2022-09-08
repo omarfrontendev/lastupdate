@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.reset__pass__wrapper {
+  height: calc(100vh - 186px);
+  // display: grid;
+  // place-items: center;
+  .reset__pass__container {
+    width: 527px;
+    .reset__pass__title {
+      font-size: $ft__18;
+      font-weight: $ft__w__medium;
+      color: $darkblue__text__color;
+      margin-bottom: 30px;
+    }
+    .reset__pass__inputs {
+      row-gap: 13px;
+      // margin-bottom: 34px;
+    }
+  }
+}

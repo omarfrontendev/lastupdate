@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.fav__toggle__btn {
+  all: unset;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background-color: $pure__white;
+  border-radius: 8px;
+  // box-shadow: 0px 4px 20px #f08f2026;
+  .like__btn__icon {
+    color: red;
+    font-size: $ft__20;
+  }
+}
+.spinner {
+  color: red;
+}

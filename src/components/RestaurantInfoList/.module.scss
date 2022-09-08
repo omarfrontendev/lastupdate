@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+.info__container {
+
+  .title {
+    color: $main__orange;
+    font-size: $ft__20;
+    font-weight: $ft__w__medium;
+    margin-bottom: 29px;
+  }
+
+  .data__container {
+    
+    .signle__row {
+
+      padding: 25px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(112, 112, 112, .13);
+      }
+      .data__value,
+      .data__key {
+        color: $dark__text__color;
+        font-size: $ft__14;
+        font-weight: $ft__w__medium;
+      }
+    }
+  }
+}

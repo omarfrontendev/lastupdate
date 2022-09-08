@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.user__dropdown {
+  padding: 14px 18px;
+  row-gap: 25px;
+  color: $title__text__color !important;
+  font-size: $ft__14;
+  font-weight: $ft__w__medium;
+  .icon {
+    color: #2e374d !important;
+    font-size: 17px;
+  }
+  .row {
+    background-color: transparent;
+    color: #2e374d;
+    border: none;
+    outline: none;
+
+    &.small__screen {
+      display: none !important;
+    }
+
+    .left__row {
+      column-gap: 10px;
+      .red__title {
+        color: #ff4646 !important;
+      }
+    }
+  }
+}
+
+// =========== Start Media Max-width: 991px (768px - 991px) ================ //
+@media (max-width: 991px) {
+  .user__dropdown {
+    .row {
+      &.small__screen {
+        display: flex !important;
+      }
+    }
+  }
+}
+// =========== End Media Max-width: 991px (768px - 991px) ================ //

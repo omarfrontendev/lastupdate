@@ -1,0 +1,16 @@
+.loading__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 100000;
+  .lottie__animate {
+    width: 50%;
+    height: 50%;
+  }
+}

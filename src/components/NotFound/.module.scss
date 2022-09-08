@@ -1,0 +1,12 @@
+.not__found__wrapper {
+  width: 100%;
+  min-height: calc(100vh - (116px + 70px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+}

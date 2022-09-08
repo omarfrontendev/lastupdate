@@ -1,0 +1,205 @@
+@import "../../styles/variables.scss";
+
+.tracking__container {
+  padding: 40px 0;
+
+  .tracking__title {
+    font-size: $ft__18;
+    font-weight: $ft__w__medium;
+    color: $darkblue__text__color;
+    margin-bottom: 40px;
+  }
+
+  .tracking__map {
+    height: 520px;
+    margin-bottom: 40px;
+    background-color: $main__orange;
+  }
+
+  .tracking__wedgits {
+
+    column-gap: 28px;
+
+    .tracking__status {
+      flex: 3;
+      padding: 20px 30px 26px;
+      border: 1px solid #E0E0E099;
+      border-radius: 12px;
+      background-color: $pure__white;
+      height: 100%;
+
+      .status__title {
+        color: $dark__text__color;
+        font-weight: $ft__w__medium;
+        font-size: $ft__17;
+        margin-bottom: 50px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 90px;
+          height: 2px;
+          background-color: #363651;
+          opacity: 0.15;
+          bottom: -16px;
+        }
+      }
+      .status {
+        
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 19px;
+          width: calc(100% - 50px);
+          height: 2px;
+          background-color: #363651;
+          opacity: 0.15;
+          transform: translateY(-9px);
+        }
+
+        .status__item {
+          row-gap: 33px;
+
+          .status__word {
+            color: $dark__text__color;
+            font-size: $ft__12;
+            font-weight: $ft__w__medium;
+          }
+
+          .status__bullets {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: $dark__text__color;
+            z-index: 1;
+          }
+
+          &.active {
+
+            .status__word {
+              color: $main__orange;
+            }
+            .status__bullets {
+              background-color: $main__orange;
+            }
+          }
+        }
+      }
+    }
+
+    .tracking__supports {
+      flex: 1.3;
+      row-gap: 20px;
+
+      .support__calling {
+        padding: 20px 17px 20px 30px;
+        border: 1px solid #E0E0E099;
+        border-radius: 12px;
+        background-color: $pure__white;
+
+        .left__support {
+
+          .support__title {
+            font-size: $ft__14;
+            font-weight: $ft__w__medium;
+            color: #231D25;
+            margin-bottom: 3px;
+          }
+
+          .support__subtitle {
+            font-size: $ft__12;
+            font-weight: $ft__w__regular;
+            color: $description__text;
+          }
+        }
+
+        .calling__btn {
+          border: none;
+          outline: none;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 43px;
+          height: 43px;
+          background-color: $main__orange;
+          color: $pure__white;
+
+          &.arrow__btn {
+            background-color: $dark__text__color;
+            font-size: 20px;
+          }
+        } 
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .tracking__container {
+    .tracking__wedgits {
+      flex-direction: column;
+      gap: 20px;
+
+      .tracking__status {
+        flex: 1;
+        width: 100%;
+      }
+
+      .tracking__supports {
+        flex-direction: row !important;
+        column-gap: 20px;
+        width: 100%;
+
+        .support__calling {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .tracking__container {
+    .tracking__wedgits {
+      gap: 10px;
+
+      .tracking__status {
+        padding: 20px;
+      }
+
+      .tracking__supports {
+        column-gap: 10px;
+
+        .support__calling {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 574px) {
+  .tracking__container {
+    
+    .tracking__wedgits {
+
+      .tracking__status {
+        .status {
+          .status__item {
+            row-gap: 20px;
+            .status__word {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .tracking__supports {
+        row-gap: 10px;
+        flex-direction: column !important;
+      }
+    }
+  }
+}

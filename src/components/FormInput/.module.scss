@@ -1,0 +1,61 @@
+@import "../../styles/variables.scss";
+
+.input__control {
+  height: 50px;
+  padding: 0 15px;
+  column-gap: 20px;
+  position: relative;
+  .input__icon {
+    z-index: 2;
+  }
+  .show__pass__btn,
+  .input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .input {
+    background-color: $pure__white;
+    flex: 1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    padding-left: 60px;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    -webkit-appearance: none !important;
+    -moz-appearance: textfield !important;
+    &:focus {
+      border: 1px solid #261c6a;
+      &::placeholder {
+        color: #261c6a;
+      }
+    }
+    &::placeholder {
+      font-size: $ft__14;
+      color: $dark__text__color;
+    }
+  }
+  .show__pass__btn {
+    position: relative;
+    .pass__icon {
+      color: #e2e2e2;
+      font-size: 21px;
+    }
+  }
+}
+
+.form__input__wrapper {
+  display: flex;
+  flex-direction: column;
+  .error,
+  .warning {
+    color: red;
+    font-weight: $ft__w__regular;
+    font-size: $ft__12;
+    line-height: 0;
+    padding-bottom: 16px;
+  }
+}

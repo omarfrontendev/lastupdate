@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.cards__row__wrapper {
+  margin-bottom: 46px;
+  .row__header {
+    margin-bottom: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .row__title {
+      font-size: $ft__18;
+      color: $darkblue__text__color;
+    }
+    .row__link {
+      color: $darkblue__text__color;
+      text-transform: capitalize;
+      display: inline-flex;
+      align-items: center;
+      .link__arrow__icon {
+        color: $main__orange;
+        margin-left: 8px;
+        font-size: $ft__16;
+      }
+    }
+  }
+}

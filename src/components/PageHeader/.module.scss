@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  margin-bottom: 40px;
+  white-space: pre;
+  max-width: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .page__header__title {
+    font-size: $ft__18;
+    color: $darkblue__text__color;
+  }
+  .items__filter__wrapper {
+    display: flex;
+    .sort__span {
+      color: $darkblue__text__color;
+      font-size: $ft__18;
+      margin-right: 25px;
+    }
+    .filter__list {
+      display: flex;
+      align-items: center;
+      .filter__list__item {
+        margin: 0 12px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &.active {
+          .filter__type__btn {
+            color: $main__orange;
+            font-weight: $ft__w__medium;
+          }
+        }
+        .filter__type__btn {
+          all: unset;
+          cursor: pointer;
+          font-size: $ft__14;
+          font-weight: $ft__w__regular;
+          color: #bdbdbd;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .page__header {
+    overflow-x: scroll;
+  }
+}

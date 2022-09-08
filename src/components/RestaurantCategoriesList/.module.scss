@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.category__container {
+  .title {
+    color: $darkblue__text__color;
+    font-size: $ft__18;
+    font-weight: $ft__w__medium;
+    margin-bottom: 42px;
+  }
+  .categories {
+    background-color: $pure__white;
+    box-shadow: 0px 6px 15px #7779b20f;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .category {
+      font-size: 17px;
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(112, 112, 112, 0.15);
+      }
+      .categ__btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: $dark__text__color;
+        font-weight: $ft__w__medium;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        padding: 22px 32px;
+      }
+      &.active {
+        .categ__btn {
+          color: $main__orange;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1199px) {
+  .category__container {
+    .categories {
+      flex-direction: row !important;
+      white-space: pre;
+      overflow-x: scroll;
+      width: 100%;
+      background-color: transparent;
+      .category {
+        background-color: $pure__white;
+        border-right: 1px solid rgba(221, 221, 221, 0.486);
+        &:first-child {
+          border-radius: 50px 0 0 50px;
+        }
+        &:last-child {
+          border-radius: 0 50px 50px 0;
+          border-right: 0;
+        }
+      }
+    }
+  }
+}

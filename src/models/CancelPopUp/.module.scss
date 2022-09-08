@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.cancel__content {
+  text-align: center;
+  padding: 20px;
+
+  .cancel__ph {
+    font-size: 24px;
+    font-weight: 500;
+    color: #07143B;
+    margin-bottom: 40px;
+  }
+  .btns {
+    column-gap: 24px;
+
+    .btn {
+      outline: none;
+      font-size: 20px;
+      font-weight: 500;
+      width: 200px;
+      height: 50px;
+      max-width: 100%;
+      border: 2px solid $main__orange;
+      background-color: $pure__white;
+      color: $main__orange;
+      border-radius: 50px;
+
+      &.btn__close {
+        color: $pure__white;
+        border-color: $dark__text__color;
+        background-color: $dark__text__color;
+      }
+    }
+  }
+}
+
+@media(max-width: 575px) {
+  .cancel__content {
+    .cancel__ph {
+      font-size: 18px;
+    }
+    .btns {
+      column-gap: 14px;
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+  }
+}

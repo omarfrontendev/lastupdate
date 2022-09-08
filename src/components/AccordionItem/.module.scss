@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 6px 15px #7779b20f;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 11px 0;
+  border: 1px solid #00000009;
+  background-color: #fafafa;
+
+  .accordion__item__btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e0e0e0;
+    padding: 0px 30px;
+    height: 66px;
+    color: #363651;
+
+    .accordion__item__title {
+      font-size: $ft__20;
+    }
+    .arrow__icon {
+      font-size: $ft__32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .3s ease-in-out;
+    }
+  }
+  // .accordion__item__body {
+
+  // }
+  .accordion__item__btn[aria-expanded="true"] {
+    background-color: $main__orange;
+    border-radius: 12px 12px 0 0;
+
+    color: $pure__white;
+    .arrow__icon {
+      transform: rotate(180deg);
+    }
+  }
+}

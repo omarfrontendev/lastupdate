@@ -1,0 +1,87 @@
+@import "../../styles/variables.scss";
+
+.meal__card__wrapper {
+  position: relative;
+  cursor: pointer;
+  .meal__card {
+    z-index: 1;
+    min-height: 140px;
+    padding: 15px 13px;
+    background-color: $pure__white;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    display: flex;
+    // align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    .meal__image_wrapper {
+      min-width: 110px;
+      min-height: 110px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      .meal__img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+    .meal__description__wrapper {
+      .meal__title {
+        font-size: $ft__18;
+        color: $title__text__color;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 6px;
+        text-transform: capitalize;
+        max-height: 18px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .restaurant__name {
+        color: $subtitle__text__color;
+        font-size: $ft__12;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+      }
+      .meal__dish {
+        color: $span__text__color;
+        font-size: $ft__12;
+        font-weight: $ft__w__regular;
+        display: block;
+      }
+      .meal__facts {
+        display: inline-flex;
+        align-items: center;
+        color: $title__text__color;
+        .meal__rating {
+          display: flex;
+          align-items: center;
+          margin-right: 16px;
+          .rating__icon {
+            color: $star__color;
+          }
+          .meal__rate__value {
+            font-weight: $ft__w__regular;
+            font-size: $ft__12;
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+  .meal__like__btn__wrapper {
+    z-index: 6;
+    display: block;
+    position: absolute;
+    right: 19px;
+    top: 22px;
+    box-shadow: 0px 4px 20px #f08f2026;
+  }
+}

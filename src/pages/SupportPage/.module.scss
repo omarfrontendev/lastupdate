@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.support__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  color: $dark__text__color;
+  font-size: 18px;
+  .title {
+    color: $darkblue__text__color;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  .link {
+    color: $dark__text__color;
+  }
+}

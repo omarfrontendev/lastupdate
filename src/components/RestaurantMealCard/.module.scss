@@ -1,0 +1,175 @@
+@import "../../styles/variables.scss";
+
+.res__mael__card__wrapper {
+  background-color: $pure__white;
+  min-height: 130px;
+  position: relative;
+  padding: 20px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f2f2f2;
+  column-gap: 20px;
+
+  .card__left__side {
+    display: flex;
+    .meal__img__wrapper {
+      box-shadow: 0px 3px 6px #00000012;
+      border: 2px solid $pure__white;
+      border-radius: 12px;
+      margin-right: 38px;
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+      display: grid;
+      place-items: center;
+      .meal__img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        object-position: center;
+      }
+    }
+    .meal__details {
+      .meal__name {
+        font-size: $ft__17;
+        font-weight: $ft__w__extraBold;
+        color: $dark__text__color;
+        margin-bottom: 5px;
+      }
+      .meal__cats {
+        font-size: $ft__11;
+        font-weight: $ft__w__regular;
+        color: #969696;
+        margin-bottom: 9px;
+        // width: 360px;
+        max-width: 360px;
+      }
+      .meal__facts {
+        display: flex;
+        align-items: center;
+        font-size: $ft__12;
+        font-weight: $ft__w__regular;
+
+        .meal__rating {
+          margin-right: 25px;
+          .star__icon {
+            margin-bottom: 4px;
+            font-size: $ft__20;
+            color: $star__color;
+          }
+        }
+        .meal__cooking__time {
+          .bike__icon {
+            margin-bottom: 4px;
+            margin-right: 5px;
+            font-size: $ft__20;
+          }
+        }
+      }
+    }
+  }
+  .card__right__side {
+    display: flex;
+    align-items: center;
+    .meal__prices {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: $ft__20;
+      margin-right: 40px;
+      .old__price {
+        font-weight: $ft__w__regular;
+        color: #bdbdbd;
+        text-decoration: line-through;
+      }
+      .current__price {
+        color: $main__orange;
+        font-weight: $ft__w__bold;
+        .value {
+          color: $title__text__color;
+        }
+      }
+    }
+    .add__cart__btn__wrapper {
+      .add__cart__btn {
+        all: unset;
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background-color: $main__orange;
+        color: $pure__white;
+        font-size: $ft__22;
+      }
+    }
+  }
+  .like__btn__wrapper {
+    width: 27px;
+    height: 27px;
+    // box-shadow: 0px 4px 20px #f08f2026;
+    border-radius: 8px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    display: grid;
+    place-items: center;
+    .meal__like__btn {
+      all: unset;
+      cursor: pointer;
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      background-color: $pure__white;
+      border-radius: 8px;
+      .like__btn__icon {
+        color: red;
+        font-size: $ft__20;
+      }
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .res__mael__card__wrapper {
+    .card__right__side {
+      .meal__prices {
+        margin-right: 14px;
+        font-size: 18px;
+        min-width: 100px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+  .res__mael__card__wrapper {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    row-gap: 20px;
+    .card__left__side,
+    .card__right__side {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .card__left__side {
+      justify-content: flex-start;
+      column-gap: 20px;
+      .meal__img__wrapper {
+        margin-right: 0;
+      }
+    }
+    .card__left__side {
+      .meal__details {
+        .meal__name {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

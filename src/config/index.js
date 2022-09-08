@@ -1,0 +1,12 @@
+const WEBSITE_NAME = process.env.REACT_APP_WEBSITE_NAME;
+const WEBSITE_TITLE = process.env.REACT_APP_WEBSITE_TITLE;
+const SERVER_API_URL = process.env.REACT_APP_SERVER_API_URL;
+const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+
+const config = {
+  WEBSITE_NAME,
+  SERVER_API_URL,
+  WEBSITE_TITLE,
+  GOOGLE_MAPS_API_KEY,
+};
+export default config;

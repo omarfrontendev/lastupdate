@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.submit__btn {
+  outline: none;
+  border-radius: 1000px;
+  height: 50px;
+  width: 100%;
+  color: $main__orange;
+  border: 2px solid $main__orange;
+  background-color: $pure__white;
+  &:disabled {
+    cursor: not-allowed;
+  }
+  .spinner {
+    color: $main__orange;
+    margin-top: 6px;
+  }
+}
+.solid__btn {
+  color: $pure__white;
+  background-color: $main__orange;
+  border-color: $main__orange;
+  .spinner {
+    color: $pure__white !important;
+  }
+}
+
+.sm__border {
+  border-radius: 12px !important;
+}

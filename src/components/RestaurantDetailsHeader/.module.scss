@@ -1,0 +1,189 @@
+@import "../../styles/variables.scss";
+
+.res__details__header__wrapper {
+  margin-bottom: 15px;
+  overflow: hidden;
+  color: $pure__white;
+  background-color: $dark__text__color;
+  box-shadow: 0px 3px 26px #00000003;
+  border-radius: 12px;
+  position: relative;
+  .like__btn__wrapper {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 13px;
+    box-shadow: 0px 4px 20px #f08f2026;
+    .meal__like__btn {
+      all: unset;
+      cursor: pointer;
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      background-color: $pure__white;
+      border-radius: 8px;
+      .like__btn__icon {
+        color: red;
+        font-size: $ft__20;
+      }
+    }
+  }
+
+  .res__details__header {
+    margin: 0;
+    .header__section__wrapper {
+      padding: 0;
+      &:not(:last-of-type) {
+        border-right: 1px solid #ffffff1c;
+      }
+      .header__section {
+        min-height: 165px;
+        .resturant__facts {
+          .resturant__name {
+            font-size: $ft__20;
+            margin-bottom: 7px;
+          }
+          .resturant__meals {
+            font-weight: $ft__w__regular;
+            color: #bdbdbd;
+          }
+          .res__specs__list {
+            margin-top: 13px;
+            display: flex;
+            align-items: center;
+            .list__item {
+              font-size: $ft__14;
+              font-weight: $ft__w__light;
+              &:nth-of-type(2) {
+                margin: 0 20px;
+              }
+              .star__icon {
+                margin-right: 3px;
+                margin-bottom: 4px;
+                font-size: $ft__20;
+                color: $star__color;
+              }
+              .delivery__icon,
+              .money__icon {
+                margin-right: 5px;
+                margin-bottom: 4px;
+                font-size: $ft__20;
+              }
+              .money__icon {
+                margin-right: 0px;
+              }
+            }
+          }
+        }
+        .search__from__wrapper {
+          margin: 0 15px;
+          background-color: #292940;
+          height: 56px;
+          border-radius: 100px;
+          padding: 0 26px;
+          color: #afafaf;
+          display: flex;
+          align-items: center;
+          .search__icon {
+            font-size: $ft__22;
+            margin-right: 15px;
+          }
+          .search__form {
+            width: 100%;
+            .search__form__input {
+              all: unset;
+              width: 100%;
+              margin-top: 4px;
+            }
+          }
+        }
+        .res__logo__wrapper {
+          display: grid;
+          place-items: center;
+          width: 110px;
+          height: 110px;
+          overflow: hidden;
+          border-radius: 4px;
+          .res__logo__image {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+          }
+        }
+      }
+      &:first-of-type {
+        .header__section {
+          display: grid;
+          place-items: center;
+        }
+      }
+      &:not(:first-of-type) {
+        .header__section {
+          padding: 0 42px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1199px) {
+  .res__details__header__wrapper {
+    .res__details__header {
+      .header__section__wrapper {
+        &:not(:first-of-type) {
+          .header__section {
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 991px) {
+  .header__section__wrapper {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #ffffff1c;
+    }
+  }
+  .resturant__facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // text-align: center;
+  }
+  .res__details__header__wrapper {
+    .res__details__header {
+      .header__section__wrapper {
+        .header__section {
+          min-height: auto;
+          padding: 24px 0 !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .res__details__header__wrapper {
+    .res__details__header {
+      .header__section__wrapper {
+        .header__section {
+          min-height: auto;
+          padding: 20px 0 !important;
+        }
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 425px) {
+
+  .header__section {
+    padding: 0 0px !important;
+  }
+}

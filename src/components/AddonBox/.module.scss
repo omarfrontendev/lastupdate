@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+.addon__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: 10px 0;
+  flex-basis: 50%;
+
+  .addon__box {
+    all: unset;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    position: relative;
+    &:checked {
+      background-color: #ffbf80;
+      &::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $main__orange;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .addon__wrapper {
+    flex-basis: 100%;
+  }
+}

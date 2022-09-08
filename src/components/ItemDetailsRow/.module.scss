@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.item__details__header__wrapper {
+  padding: 32px 0;
+  .links__list {
+    display: flex;
+    align-items: center;
+    .link__item {
+      margin-right: 31px;
+      .link {
+        all: unset;
+        cursor: pointer;
+        font-size: $ft__18;
+        color: $dark__text__color;
+        background-color: #e0e0e0;
+        padding: 11px 15px;
+        padding-right: 32px;
+        border-radius: 8px;
+        span {
+          text-transform: capitalize;
+          margin-left: 13px;
+        }
+        svg {
+          path {
+            stroke: $dark__text__color;
+          }
+        }
+      }
+      .active__link {
+        color: $pure__white;
+        background-color: $main__orange;
+        box-shadow: 0px 6px 16px #ffab5973;
+        svg {
+          path {
+            stroke: $pure__white;
+          }
+        }
+      }
+    }
+  }
+}

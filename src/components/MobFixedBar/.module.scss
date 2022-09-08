@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+.mob__fixed__bar__wrapper {
+  transition: 0.3s ease-in-out;
+  margin-bottom: 20px;
+  height: 70px;
+  .mob__fixed__bar {
+    position: fixed;
+    bottom: 25px;
+    width: calc(100% - 48px);
+    z-index: 10;
+    background-color: $pure__white;
+    height: 70px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 7px 10px rgba($color: #000000, $alpha: 3%);
+    .mob__nav__list {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .mob__nav__home {
+        background-color: $main__purple;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        .mob__nav__link {
+          display: block;
+          padding: 1rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &.bottom__page {
+    .mob__fixed__bar {
+      position: relative;
+      width: 100%;
+      bottom: auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mob__fixed__bar__wrapper {
+    .mob__fixed__bar {
+      width: calc(100% - 32px);
+    }
+  }
+}

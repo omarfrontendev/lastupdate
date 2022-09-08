@@ -1,0 +1,140 @@
+@import "../../styles/variables.scss";
+
+.notification__Dropdown {
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header__dropdown {
+    padding: 41px 34px;
+    background-color: #F9F9F9;
+    margin-bottom: 27px;
+  }
+
+  .notification__header {
+
+    .left__header {
+      column-gap: 17px;
+      
+      .btn {
+        background-color: $pure__white;
+        color: $dark__text__color;
+        font-size: $ft__14;
+        font-weight: $ft__w__regular;
+        border: 1px solid #E1E1E1;
+        padding: 8px 25px;
+        border-radius: 17px;
+        transition: .3s ease-in-out;
+
+        &.active {
+          background-color: $main__orange;
+          color: $pure__white;
+          box-shadow: 0px 3px 12px #FC601152;
+          border: 1px solid $main__orange;
+        }
+
+        &:disabled {
+          opacity: .5;
+          cursor: not-allowed;
+        }
+      }
+    }
+    .right__header {
+      color: $dark__text__color;
+      font-size: 26px;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: fit-content;
+      padding: 0;
+    }
+  }
+
+  .notifications {
+
+    max-height: 63vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(216, 216, 216);
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    .signle__notificate {
+      column-gap: 19px;
+      padding: 14px 10px 14px 26px;
+      border-top: 1px solid #FFF;
+      border-bottom: 1px solid #FFF;
+      background-color: $pure__white;
+      cursor: pointer;
+
+      &.not__seen {
+        border-top: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        background-color: #F6F6F6 ;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        background-color: $main__orange;
+        border-radius: 50%;
+        display: block;
+      }
+      .notificate__title {
+        font-size: $ft__14;
+        font-weight: $ft__w__medium;
+        color: $main__orange;
+      }
+      .notificate__date {
+        color: $title__text__color;
+        font-size: $ft__12;
+        font-weight: $ft__w__regular;
+      }
+    }
+  }
+
+}
+
+.empty__menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+// ======== Start Media max-width: 1399px (1200px - 1399px) ==========//
+@media(max-width: 1399px) {
+  .notification__Dropdown {
+    .header__dropdown {
+      padding: 24px 30px;
+      margin-bottom: 10px;
+    }
+    .notifications {
+      max-height: calc(100vh - 293px);
+    }
+  }
+}
+// ======== End Media max-width: 1399px (1200px - 1399px) ==========//
+
+// ======== Start Media max-width: 991px (768px - 991px) ==========//
+@media(max-width: 991px) {
+  .notification__Dropdown {
+    .notifications {
+      max-height: 100%;
+    }
+  }
+}
+// ======== End Media max-width: 991px (768px - 991px) ==========//
